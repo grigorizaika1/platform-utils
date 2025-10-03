@@ -19,7 +19,7 @@ chmod +x "$SCRIPT_DIR"/*
 
 echo "Fathom platform utilities activated!"
 echo "Available commands:"
-ls -1 "$SCRIPT_DIR" | grep -v activate | while read cmd; do
+ls -1 "$SCRIPT_DIR" | grep -v activate.sh | while read cmd; do
     if [[ -x "$SCRIPT_DIR/$cmd" ]]; then
         echo "  - $cmd"
     fi

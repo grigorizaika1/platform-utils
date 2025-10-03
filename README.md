@@ -11,8 +11,8 @@ The platform-utils provides scripts and tools to help manage and initialize the 
 ```
 platform-utils/
 ├── bin/
-│   ├── activate    # Script to add bin directory to PATH
-│   └── init        # Script to clone required repositories
+│   ├── activate.sh    # Script to add bin directory to PATH
+│   └── init.sh        # Script to clone required repositories
 └── README.md
 ```
 
@@ -23,7 +23,7 @@ platform-utils/
 First, activate the platform utilities to add the `bin` directory to your PATH:
 
 ```bash
-source bin/activate
+source bin/activate.sh
 ```
 
 This will:
@@ -36,7 +36,7 @@ This will:
 Run the init script to clone the required Fathom repositories:
 
 ```bash
-init
+init.sh
 ```
 
 This will:
@@ -46,12 +46,12 @@ This will:
 
 ## Scripts
 
-### `activate`
+### `activate.sh`
 - Adds the `bin` directory to your PATH
 - Makes all scripts in `bin` executable
 - Shows available commands
 
-### `init`
+### `init.sh`
 - Clones required Fathom repositories to the `platform-repos` directory
 - Updates existing repositories with latest changes
 - Provides colored output for better visibility
