@@ -11,8 +11,9 @@ The platform-utils provides scripts and tools to help manage and initialize the 
 ```
 platform-utils/
 ├── bin/
-│   ├── activate.sh    # Script to add bin directory to PATH
-│   └── init.sh        # Script to clone required repositories
+│   ├── activate.sh         # Script to add bin directory to PATH
+│   └── init/
+│       └── pull_repos.sh   # Script to clone required repositories
 └── README.md
 ```
 
@@ -33,15 +34,15 @@ This will:
 
 ### 2. Initialize Platform Repositories
 
-Run the init script to clone the required Fathom repositories:
+Run the pull_repos script to clone the required Fathom repositories:
 
 ```bash
-init.sh
+init/pull_repos.sh
 ```
 
 This will:
 - Clone `fathom-io/data-ingestion` to `../platform-repos/data-ingestion`
-- Clone `fathom-io/data-processing` to `../platform-repos/data-processing`
+- Clone `fathom-io/platform-backend` to `../platform-repos/platform-backend`
 - Pull latest changes if repositories already exist
 
 ## Scripts
@@ -51,7 +52,7 @@ This will:
 - Makes all scripts in `bin` executable
 - Shows available commands
 
-### `init.sh`
+### `init/pull_repos.sh`
 - Clones required Fathom repositories to the `platform-repos` directory
 - Updates existing repositories with latest changes
 - Provides colored output for better visibility
